@@ -10,8 +10,8 @@ permissions:
   contents: read
 
 env:
-  AWS_REGION: us-east-2
-  ECR_REGISTRY: 302165638893.dkr.ecr.us-east-2.amazonaws.com 
+  AWS_REGION: us-east-1
+  ECR_REGISTRY: 302165638893.dkr.ecr.us-east-1.amazonaws.com  
   ECR_REPOSITORY: primer-proyecto-cloud-computing
 
 concurrency:
@@ -34,7 +34,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
-          allowed-account-ids: '652546414920'
+          allowed-account-ids: '302165638893'
 
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
